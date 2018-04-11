@@ -14,17 +14,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |message|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-
-### association
-- belongs_to :user
-- belongs_to :group
-
-## imageTable
-|Column|Type|Options|
-|------|----|-------|
-|image|image|null: false|
+|image|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
