@@ -7,31 +7,7 @@
     %button{type: "submit"} Edit
 
 .mainMessages
-  %ul.mainMessages__ul
-    %li.mainMessages__li
-      .mainMessages__li__message
-        .mainMessages__li__message__name
-          FUKO
-        .mainMessages__li__message__date
-          2018/04/09 06:50
-        .mainMessages__li__message__text
-          Hello!
-    %li.mainMessages__li
-      .mainMessages__li__message
-        .mainMessages__li__message__name
-          FUKO
-        .mainMessages__li__message__date
-          2018/04/10 11:20
-        .mainMessages__li__message__text
-          なるほど
-    %li.mainMessages__li
-      .mainMessages__li__message
-        .mainMessages__li__message__name
-          FUKO
-        .mainMessages__li__message__date
-          2018/04/10 11:30
-        .mainMessages__li__message__text
-          お腹すいた
+  = render "mainMessages"
 
 .footer
   .footer__form
