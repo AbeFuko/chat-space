@@ -1,0 +1,103 @@
+html, body {
+  height: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.rightContents {
+  float: left;
+  height: 100vh;
+  width: calc(100vw - 300px);
+}
+
+  .rightHeader {
+    height: 96px;
+    padding: 0 40px;
+    border-bottom: solid thin #eee;
+
+      &__block {
+        float: left;
+
+          &__groupName {
+            color: #333;
+            font-size: 20px;
+            padding-top: 35px;
+          }
+
+          &__member {
+            float: left;
+            color: #999;
+            font-size: 12px;
+            padding: 15px 0 14px;
+          }
+      }
+
+      &__button button {
+        float: right;
+        color: #38AEF0;
+        border: solid thin;
+        padding: 0 20px;
+        margin: 28px 0;
+        height:40px;
+      }
+  }
+
+  .mainMessages {
+    height: calc(100vh - 96px - 90px);
+    position: relative;
+
+      &__li__message {
+        padding: 40px 40px;
+
+          &__name {
+            color: #434A54;
+            font-size: 16px;
+            font-weight: bold;
+            float: left;
+          }
+
+          &__date {
+            color: #999;
+            font-size: 12px;
+            padding: 0 0 0 10px;
+            float: left;
+          }
+
+          &__text {
+            padding-top: 10px;
+            color: #434A54;
+            font-size: 14px;
+            clear: both;
+          }
+      }
+  }
+
+  .footer {
+    padding: 20px 50px;
+    display: flex;
+    font-size: 16px;
+
+      &__form input {
+        height: 50px;
+        width: calc(100vw - 300px - 180px);
+        background-color: #FFF;
+        color: #434A54;
+        text-indent: 10pt;
+      }
+
+      &__icon label {
+          position: relative;
+          right: 30px;
+          top: 15px;
+      }
+
+      &__button button{
+        color: #FFF;
+        background-color: #38AEF0;
+        height: 50px;
+        padding: 0 20px;
+        position:absolute;
+        right: 40px;
+      }
+  }
