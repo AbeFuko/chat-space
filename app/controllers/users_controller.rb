@@ -1,6 +1,13 @@
 class UsersController < ApplicationController
 
+  def index
+    @users = User.find(params[:id])
+    @member = @users.group_user.where(:group_id).first
+    # @member = Group.find(params[:id]).users.map(&:name)
+  end
+
   def edit
+    @user = User.new
   end
 
   def update

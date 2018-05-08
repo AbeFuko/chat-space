@@ -7,13 +7,16 @@ ja:
 #      already_confirmed: "was already confirmed"
       not_locked: "は凍結されていません"
 #      not_locked: "was not locked"
+      blank: "グループ名を入力してください"
 
   devise:
     failure:
-      unauthenticated: 'ログインしてください。'
+      unauthenticated: 'ログインまたは登録が必要です。'
 #      unauthenticated: 'You need to sign in or sign up before continuing.'
       unconfirmed: '本登録を行ってください。'
 #      unconfirmed: 'You have to confirm your account before continuing.'
+      already_authenticated: '既にログインされています。'
+
       locked: 'あなたのアカウントは凍結されています。'
 #      locked: 'Your account is locked.'
       invalid: 'メールアドレスかパスワードが違います。'
@@ -40,7 +43,7 @@ ja:
       confirmed: 'アカウントを登録しました。'
 #      confirmed: 'Your account was successfully confirmed. You are now signed in.'
     registrations:
-      signed_up: 'アカウント登録を受け付けました。確認のメールをお送りします。'
+      signed_up: 'アカウントが登録されました。'
 #      signed_up: 'You have signed up successfully. If enabled, a confirmation was sent to your e-mail.'
       updated: 'アカウントを更新しました。'
 #      updated: 'You updated your account successfully.'
@@ -61,4 +64,10 @@ ja:
       unlock_instructions:
         subject: 'アカウントの凍結解除'
 #        subject: 'Unlock Instructions'
+
+  time:
+    formats:
+      default: ! '%Y/%m/%d %H:%M'
+      long: ! '%Y年%m月%d日(%a)%H時%M分%S秒 %z'
+      short: ! '%Y年%m月%d日 %H:%M'
 

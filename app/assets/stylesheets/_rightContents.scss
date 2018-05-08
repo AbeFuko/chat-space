@@ -29,75 +29,102 @@ html, body {
             float: left;
             color: #999;
             font-size: 12px;
-            padding: 15px 0 14px;
+            padding-top: 12px;
+          }
+
+          ul{
+            float: left;
+            font-size: 12px;
+            margin-top: 14px;
+            display: inline-block;
+            padding-right: 5px;
+            color: #999;
           }
       }
 
-      &__button button {
+      &__button a {
         float: right;
         color: #38AEF0;
         border: solid thin;
         padding: 0 20px;
-        margin: 28px 0;
+        margin: 28px 0 0;
         height:40px;
+        line-height: 40px;
+        font-size: 16px;
+        cursor: pointer;
       }
   }
 
   .mainMessages {
-    height: calc(100vh - 96px - 90px);
+    height: calc(100vh - 96px - 130px);
     position: relative;
+    overflow: scroll;
+    padding: 0 40px 40px;
 
-      &__li__message {
-        padding: 40px 40px;
+      & .message {
+        padding: 40px 0 0;
 
-          &__name {
-            color: #434A54;
-            font-size: 16px;
-            font-weight: bold;
-            float: left;
+          & .upper-message {
+            &__user-name {
+              color: #434A54;
+              font-size: 16px;
+              font-weight: bold;
+              float: left;
+            }
+
+            &__date {
+              color: #999;
+              font-size: 12px;
+              padding: 0 0 0 10px;
+              float: left;
+            }
           }
 
-          &__date {
-            color: #999;
-            font-size: 12px;
-            padding: 0 0 0 10px;
-            float: left;
-          }
-
-          &__text {
-            padding-top: 10px;
-            color: #434A54;
-            font-size: 14px;
+          & .lower-message {
             clear: both;
+              &__content {
+                padding-top: 10px;
+                color: #434A54;
+                font-size: 14px;
+              }
           }
       }
   }
 
   .footer {
     padding: 20px 50px;
-    display: flex;
-    font-size: 16px;
 
-      &__form input {
-        height: 50px;
-        width: calc(100vw - 300px - 180px);
-        background-color: #FFF;
-        color: #434A54;
-        text-indent: 10pt;
-      }
+      &__form {
+        position: relative;
 
-      &__icon label {
-          position: relative;
-          right: 30px;
-          top: 15px;
-      }
+          & .form__message {
+            height: 50px;
+            width: calc(100vw - 300px - 180px);
+            background-color: #FFF;
+            color: #434A54;
+            text-indent: 10pt;
+            border: none;
+          }
 
-      &__button button{
-        color: #FFF;
-        background-color: #38AEF0;
-        height: 50px;
-        padding: 0 20px;
-        position:absolute;
-        right: 40px;
+          &__mask {
+              position: absolute;
+              right: 90px;
+              top: 15px;
+
+                label {
+                  cursor: pointer;
+                }
+          }
+
+          & .form__submit {
+            color: #FFF;
+            background-color: #38AEF0;
+            height: 50px;
+            padding: 0 20px;
+            position: absolute;
+            margin: 0 15px;
+            border: none;
+            cursor: pointer;
+          }
       }
   }

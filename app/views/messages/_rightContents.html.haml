@@ -1,24 +1,26 @@
 
 .rightHeader
   .rightHeader__block
-    .rightHeader__block__groupName Sampleグループ
-    .rightHeader__block__member Member : FUKO
+    .rightHeader__block__groupName
+      = @group.name
+    .rightHeader__block__member Member：
+    %ul
+      %li
+        = @member
+
   .rightHeader__button
-    %button{type: "submit"} Edit
+    %a{type: "submit", onclick: "href = '/groups/#{@group.id}/edit'"} Edit
 
 .mainMessages
-  = render "mainMessages"
+  = render @messages
 
 .footer
   .footer__form
-    %form
-      %input{type: "text", placeholder: "type a message"}
-
-  .footer__icon
-    %label.upload-label{for: "upload-icon"}
-      %i.fa.fa-picture-o
-        %input{type: "file", id: "upload-icon", style: "display:none;"}
-
-  .footer__button
-    %button{type: "submit"} Send
+    = form_for [@group, @message] do |f|
+      =f.text_field :content, class: "form__message", placeholder: "type a message"
+      .footer__form__mask
+        = f.label :image, class: "form__mask__image" do
+          = fa_icon "picture-o", class: "icon"
+          = f.file_field :image, style: "display:none;", class: "hidden"
+      = f.submit "Send", class: "form__submit"
 
